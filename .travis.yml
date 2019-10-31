@@ -1,0 +1,16 @@
+
+language: java
+java:
+  - 1.8.0_231
+install: true
+script:
+  - mvn clean install
+
+branches:
+  only:
+    - master
+deploy:
+  provider: heroku
+  app: helloworldexam
+  api_key:
+    secure: 07a7cdd9-b311-4190-9662-62d8fd0c67fc
